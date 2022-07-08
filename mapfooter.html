@@ -13,10 +13,22 @@
     <link rel="stylesheet" href="./css/map-footer.css">
     <!-- 폰트 -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap" rel="stylesheet">
+    <!-- wow.js -->
+    <link rel="stylesheet" href="https://wowjs.uk/css/libs/animate.css">
+    <script src="https://wowjs.uk/dist/wow.min.js"></script>
     <!-- 폰트어썸 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <!----- center-logo ----->
+    <div class="centerlogo-wrap">
+        <div class="center-logo">
+            <img src="./images/리소프트로고_big.png" alt="리소프트 로고" class="wow" data-wow-delay="0.3s" style="animation-delay :0.3s; animation-name: fadeInDown;">
+        </div>
+    </div>
+    <!----- End center-logo ----->
+    
+    <!----- map ----->
     <div class="map-wrap">
         <div id="map" class="indexKakaoMap"></div>
         <div class="map-info-wrap">
@@ -69,8 +81,13 @@
     
         // 마커가 지도 위에 표시되도록 설정합니다
         marker.setMap(map);
+        
+        // 나타내기 wow 기능 사용
+        new WOW().init();
     </script>
+    <!----- End map ----->
 
+    <!----- footer ----->
     <footer>
         <div class="footer-wrap">
             <div class="footer-logo">
@@ -99,24 +116,6 @@
             </div>
         </div>
     </footer>
+    <!----- End footer ----->
 </body>
 </html>
-
-<!-- 
-    span태그 사용한 거  
-    <div class="footer-info">
-    <p>
-        <span>상호. (주)리소프트</span>
-    </p>
-    <p><span>대표이사. 오유나</span></p>
-    <p><span>사업자등록번호. 722-81-02219</span></p>
-    <p><span>개인정보책임자. 이현지</span></p>
-    <pre> </pre>
-    <p><span>주소. (41260) 대구광역시 동구 동구대로 465, 대구스케일업허브 (DASH) 713 (신천동 106)</span></p>
-    <p><span>전화. </span><a href="tel:053-475-2110" style="cursor: text;">
-        <span>(053) 475-2100</span></a>
-        <i class="fas fa-solid fa-pipe"></i> </p>
-    <p><span>팩스. </span><a href="javascript:void(0);" style="cursor: text;">
-        <span>(0504) 257-5966</span></a></p>
-    <p><span>이메일. call@resoft.kr</span></p>
-</div>  -->
